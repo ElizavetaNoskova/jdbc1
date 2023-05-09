@@ -27,6 +27,7 @@ public class Employee {
     public String getFirstName() {
         return firstName;
     }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -50,15 +51,19 @@ public class Employee {
     public int getAge() {
         return age;
     }
+
     public void setAge(int age) {
         this.age = age;
     }
+
     public int getCityId() {
         return cityId;
     }
+
     public void setCityId(int cityId) {
         this.cityId = cityId;
     }
+
     @Override
     public String toString() {
         return "Employee{" +

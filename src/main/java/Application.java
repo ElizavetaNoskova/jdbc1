@@ -39,7 +39,7 @@ public class Application {
         }
 
         EmployeeDAO employeeDAO = new EmployeeDAOImpl();
-        List <Employee> employees = employeeDAO.getAllEmployee();
+        List<Employee> employees = employeeDAO.getAllEmployee();
 
         for (Employee employee : employees) {
             System.out.println("ID: " + employee.getId());
@@ -50,19 +50,19 @@ public class Application {
 
         employeeDAO.updateEmployee(new Employee(6, "Jon", "Martinez", "male", 26, 8));
         List<Employee> updateEmployee = employeeDAO.getAllEmployee();
-        for (Employee employee: updateEmployee) {
+        for (Employee employee : updateEmployee) {
             System.out.println(employee);
         }
 
-        employeeDAO.createEmployee(new Employee(9,"Zlata","Pock","female",34,3));
-        for (Employee employee: employees) {
+        employeeDAO.createEmployee(new Employee(9, "Zlata", "Pock", "female", 34, 3));
+        for (Employee employee : employees) {
             System.out.println(employee);
         }
 
         System.out.println(employeeDAO.getEmployeeById(2));
 
         employeeDAO.deleteEmployee(7);
-        for (Employee employee: employees) {
+        for (Employee employee : employees) {
             System.out.println(employee);
         }
 

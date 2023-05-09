@@ -12,12 +12,12 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         try (final Connection connection = DriverManager.getConnection(url, user, password);
              PreparedStatement statement = connection.prepareStatement("INSERT INTO employee(id,first_name, last_name, gender, age, city_id) " +
                      "VALUES (?,?,?,?,?,?)")) {
-            statement.setInt(1,employee.getId());
-            statement.setString(2,employee.getFirstName());
-            statement.setString(3,employee.getLastName());
-            statement.setString(4,employee.getGender());
-            statement.setInt(5,employee.getAge());
-            statement.setInt(6,employee.getCityId());
+            statement.setInt(1, employee.getId());
+            statement.setString(2, employee.getFirstName());
+            statement.setString(3, employee.getLastName());
+            statement.setString(4, employee.getGender());
+            statement.setInt(5, employee.getAge());
+            statement.setInt(6, employee.getCityId());
             int resultSet = statement.executeUpdate();
             System.out.println("Сотрудник добавлен");
 
@@ -84,11 +84,11 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     public void updateEmployee(Employee employee) {
         try (final Connection connection = DriverManager.getConnection(url, user, password);
              PreparedStatement statement = connection.prepareStatement("UPDATE employee SET first_name=?,last_name=?,gender=?,age=? WHERE id =?")) {
-            statement.setString(1,employee.getFirstName());
-            statement.setString(2,employee.getLastName());
-            statement.setString(3,employee.getGender());
-            statement.setInt(4,employee.getAge());
-            statement.setInt(5,employee.getId());
+            statement.setString(1, employee.getFirstName());
+            statement.setString(2, employee.getLastName());
+            statement.setString(3, employee.getGender());
+            statement.setInt(4, employee.getAge());
+            statement.setInt(5, employee.getId());
             int resultSet = statement.executeUpdate();
             System.out.println("Сотрудник обновлен");
         } catch (SQLException e) {
